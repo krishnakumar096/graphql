@@ -1,0 +1,51 @@
+Query:-
+
+//to get book with author
+{
+  book(id: "book_id"){
+    name,
+    genre,
+    author{
+      name
+    }
+  }
+}
+
+//to get author with all books
+{
+  author(id: "5ec77c372ccf9d4190d76ca9"){
+    name,
+    age,
+    books{
+      name
+    }
+  }
+}
+
+//to get all books
+books{
+    name,
+    genre
+}
+
+//to get all authors
+authors{
+    name,
+    age
+}
+
+Mutation:-
+
+mutation {
+    addAuthor(name: "Krishna", age: 25){
+        name,
+        age
+    }
+}
+
+mutation {
+    addBook(name: "The Long Night", genre: "Dramatic"){
+        name,
+        genre
+    }
+}
